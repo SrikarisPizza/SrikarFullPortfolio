@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srikar's Portfolio</title>
+    <style>
+        :root {
+            --periwinkle: #CCCCFF;
+            --dark-peri: #9999FF;
+            --white: #ffffff;
+            --text-color: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--white);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background-color: var(--periwinkle);
+            width: 100%;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        nav button {
+            background: none;
+            border: 2px solid transparent;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--white);
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav button:hover {
+            background-color: var(--white);
+            color: var(--dark-peri);
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin-top: 30px;
+            padding-bottom: 50px;
+        }
+
+        section {
+            display: none; 
+            background: var(--white);
+            padding: 30px;
+            border: 3px solid var(--periwinkle);
+            border-radius: 30px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2 { color: var(--dark-peri); }
+
+        .project-card {
+            border: 2px solid var(--periwinkle);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            margin-top: 15px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid var(--periwinkle);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button onclick="showPage('about')">About</button>
+        <button onclick="showPage('projects')">Projects</button>
+        <button onclick="showPage('resume')">Resume</button>
+        <button onclick="showPage('contact')">Contact</button>
+    </nav>
+
+    <div class="container">
+        
+        <section id="about" class="active">
+            <h1>About Me</h1>
+            <p>
+                Have you ever found yourself walking across the sidewalk, when you come across a TV store and see some fun game being played, thinking: I want that? Well, the way that those apps or shows are created is through computer science. That is the pathway I'm taking. I plan to get into a UC college with a good technology institute (hopefully MIT) and earn a bachelor's in computer science and engineering. This is my goal because I have always been interested in coding, building, and designing things. Some key strengths I have include problem-solving. Most of the time, I try every possibility in my head and run the scenarios that have the best income. Another strength I have is Overdoing. I always add extra to my projects if I have the time, be it a cool gimmick or shortcuts. A major accomplishment this freshman year is getting an extremely good grade in honors chemistry, which, according to many of my friends, is a hard course. Another major accomplishment is that I won the semester 1 fire award this year. I am also very adaptive. If something changes, I can switch gears quickly. I am also very flexible and versatile, as I can do a wide variety of things from playing badminton to video games. There are many things I have learned from my experiences. First of all, nothing is easy. It's either hard or harder. Second, don't procrastinate. That just clogs up your future schedule, giving you less time to work on more important projects. Finally, try your best. Don't quit immediately after failing once or twice, and even if you aren't able to complete the whole project, that’s fine. In conclusion, I have a wide range of experience and strong skills. Thank you for your time, and please enjoy viewing the rest of my site.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div id="project-list">
+                <div class="project-card">
+                    <h2>PizzaGo</h2>
+                    <p>A pizza calculator.</p>
+                    <div class="video-container">
+                        <video id="vid1" controls>
+                            <source src="PizzaGo.mov" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h2>Forms.com</h2>
+                    <p>An app that allows you to add and receive forms.</p>
+                    <div class="video-container">
+                        <video id="vid2" controls>
+                            <source src="Forms.com.mov" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h2>Whack-A-Diglet.</h2>
+                    <p>Whack-A-Mole, but with Diglet.</p>
+                    <div class="video-container">
+                        <video id="vid3" controls>
+                            <source src="Whack-A-Dig.mov" type="video/quicktime">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h1>My Resume</h1>
+            <h3>Education</h3>
+            <p>High School - Class of 2027</p>
+            <hr color="#CCCCFF">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML5 / CSS3</li>
+                <li>JavaScript Basics</li>
+                <li>UI Design</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out!</p>
+            <form onsubmit="return false;">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button style="background: var(--periwinkle); border:none; padding: 10px 20px; border-radius:10px; color:white; cursor:pointer;">Send</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
