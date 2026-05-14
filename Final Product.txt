@@ -132,7 +132,7 @@
             <div id="project-list">
                 <div class="project-card">
                     <h2>PizzaGo</h2>
-                    <p>A pizza calculator.</p>
+                    <p>A food ordering website: https://py.space/g/V5LHK7LL3ZYWJCFV.</p>
                     <div class="video-container">
                         <video id="vid1" controls>
                             <source src="PizzaGo.mov" type="video/quicktime">
